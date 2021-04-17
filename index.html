@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Stats preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,19 +18,41 @@
   </style>
 </head>
 <body>
+  <main class="container">
+    <div class="card__wrapper">
+      <div class="card__content">
+        <h1 class="card__heading">
+          Get <label>insights</label> that help your business grow.
+        </h1>
+        <p class="card__body">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.
+        </p>
+        <div class="stats__container">
+          <div class="stats__wrapper">
+            <h3 class="stats__heading">10k+</h3>
+            <label class="stats__label">companies</label>
+          </div>
+          <div class="stats__wrapper">
+            <h3 class="stats__heading">314</h3>
+            <label class="stats__label">templates</label>
+          </div>
+          <div class="stats__wrapper">
+            <h3 class="stats__heading">12M+</h3>
+            <label class="stats__label">queries</label>
+          </div>
+        </div>
+      </div>
+      <div class="card__image">
+        <div class="card__image__overlay"></div>
+        <img src="./images/image-header-desktop.jpg" />
+      </div>
+    </div>
+  </main>
 
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

@@ -1,0 +1,109 @@
+:root {
+  --color-very-dark-blue: hsl(233, 47%, 7%);
+  --color-desaturated-blue: hsl(244, 38%, 16%);
+  --color-soft-voilet: hsl(277, 64%, 61%);
+  --color-dark-voilet: hsl(277, 42%, 38%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-transparent: hsla(0, 0%, 100%, 0.75);
+  --color-white-very-transparent: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-very-dark-blue);
+  font-size: 15px;
+}
+
+main.container {
+  display: flex;
+  margin: 2em auto;
+  padding-top: 7em;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.card__content {
+  background-color: var(--color-desaturated-blue);
+  padding: 3em 5em 3em 3em;
+  border-radius: 10px 0 0 10px;
+}
+
+/* .card__image {
+  height: 100%;
+  width: 30em;
+  border-radius: 0 10px 10px 0;
+  background: url("./images/image-header-desktop.jpg") no-repeat top center;
+} */
+
+.card__image__overlay {
+  position: absolute;
+  background-color: var(--color-soft-voilet);
+  opacity: 0.4;
+  border-radius: 0 10px 10px 0;
+  width: 30em;
+  height: 25.85em;
+  z-index: 2;
+}
+
+.card__image > img {
+  height: 100%;
+  width: 30em;
+  border-radius: 0 10px 10px 0;
+  z-index: -1;
+}
+
+.card__heading {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--color-white);
+  font-size: 2.2em;
+}
+
+.card__heading > label {
+  color: var(--color-soft-voilet);
+}
+
+p.card__body {
+  font-family: 'Inter', sans-serif;;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  color: var(--color-white-transparent);
+  line-height: 1.8em;
+}
+
+.stats__container {
+  display: flex;
+  /* padding: 3em; */
+  justify-content: space-between;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.stats__heading {
+  color: var(--color-white);
+  font-size: 1.4em;
+}
+
+.stats__label {
+  text-transform: uppercase;
+  color: var(--color-white-very-transparent);
+  letter-spacing: 0.1em;
+  font-size: 0.7em;
+}
+
+
+@media screen and (min-width: 768px) {
+  main.container {
+    max-width: 920px;
+    margin: 5em auto;
+  }
+  .card__wrapper {
+    flex-direction: row;
+  }
+}
