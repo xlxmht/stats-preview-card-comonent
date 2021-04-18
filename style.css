@@ -46,11 +46,12 @@ main.container {
 .card__image__overlay {
   position: absolute;
   background-color: var(--color-soft-voilet);
-  opacity: 0.4;
+  opacity: 0.6;
   border-radius: 0 10px 10px 0;
   width: 30em;
   height: 25.85em;
   z-index: 2;
+  background-color: #64039e; 
 }
 
 .card__image > img {
@@ -58,6 +59,8 @@ main.container {
   width: 30em;
   border-radius: 0 10px 10px 0;
   z-index: -1;
+    display: block;
+    object-fit: cover;
 }
 
 .card__heading {
@@ -101,9 +104,57 @@ p.card__body {
 @media screen and (min-width: 768px) {
   main.container {
     max-width: 920px;
-    margin: 5em auto;
+    margin: 4em auto;
   }
   .card__wrapper {
     flex-direction: row;
   }
+}
+@media screen and (max-width: 768px) {
+  main.container {
+    display: flex;
+    margin: 0em auto; 
+    padding-top: 0em;
+  }
+  .card__image__overlay{
+        height: 24.90em;
+  }
+  .card__image{
+      margin: 20px 20px 0px 20px;
+  }
+  .card__image > img{
+    height: auto;
+    border-radius: 0;
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+  }
+  .card__content{
+    text-align: center;
+    padding: 3em 2em 3em 2em;
+    margin: -10px 20px 20px 20px;
+    border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+  .stats__container{
+      display: flow-root;
+  }
+  .stats__wrapper{
+    margin-bottom: 30px;
+  }
+  .stats__heading{
+    font-size: 2em;
+  }
+  .card__image__overlay{
+        width: auto;
+  }
+
+.card__image__overlay {
+    width: 320px;
+    height: 265px;
+    border-radius: 0px;
+}
+
 }
