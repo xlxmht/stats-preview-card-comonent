@@ -1,0 +1,119 @@
+:root {
+  --color-very-dark-blue: hsl(233, 47%, 7%);
+  --color-desaturated-blue: hsl(244, 38%, 16%);
+  --color-soft-voilet: hsl(277, 64%, 61%);
+  --color-dark-voilet: hsl(277, 42%, 38%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-transparent: hsla(0, 0%, 100%, 0.75);
+  --color-white-very-transparent: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  background-color: var(--color-very-dark-blue);
+  font-size: 15px;
+  color: #fff;
+}
+
+.container {
+  flex-direction: column-reverse;
+  margin: 5em 2em;
+}
+
+.card__content {
+  padding-bottom: 2em;
+  background-color: var(--color-desaturated-blue);
+  border-radius: 0 0 10px 10px;
+}
+
+.card__heading {
+  padding: 0 1em;
+  text-align: center;
+}
+
+.card__body {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 0 2em;
+  color: var(--color-white-transparent);
+  line-height: 1.8em;
+}
+
+.card__heading > label {
+  color: var(--color-soft-voilet);
+}
+
+img {
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+  height: auto;
+  background-blend-mode: screen;
+  opacity: 0.6;
+}
+
+img::before {
+  position: absolute;
+  content: '';
+  background-color: #64039e;
+  /* opacity: 0.6; */
+  /* background-blend-mode: screen; */
+}
+
+.stats__container {
+  font-family: "Lexend Deca", sans-serif;
+  padding: 0 4em;
+  flex-direction: column;
+  align-content: center;
+}
+
+.stats__heading {
+  color: var(--color-white);
+  /* font-size: 1.4em; */
+  margin-bottom: 0;
+}
+
+.stats__label {
+  margin-left: -1em;
+  text-transform: uppercase;
+  color: var(--color-white-very-transparent);
+  letter-spacing: 0.1em;
+  font-size: 0.7em;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 920px;
+    margin: 5em auto;
+    flex-direction: row;
+  }
+  .card__content {
+    border-radius: 10px 0 0 10px;
+  }
+  .card__heading {
+    text-align: left;
+    padding: 1em 2em 0 2em;
+  }
+  .card__body {
+    text-align: left;
+    padding-left: 4.5em;
+    padding-right: 7em;
+  }
+  img {
+    border-radius: 0 10px 10px 0;
+  }
+  .stats__container {
+    flex-direction: row;
+    margin-top: 2em;
+  }
+  .stats__label {
+    margin-left: 0;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  .container {
+    max-width: 920px;
+    margin: 5em auto;
+  }
+} */
