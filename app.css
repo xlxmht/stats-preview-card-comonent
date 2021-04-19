@@ -43,21 +43,18 @@ body {
   color: var(--color-soft-voilet);
 }
 
+.card__image {
+  background-color: #64039e;
+  border-radius: 10px 10px 0 0;
+}
+
 img {
-  position: relative;
+  display: block;
   border-radius: 10px 10px 0 0;
   max-width: 100%;
   height: auto;
   background-blend-mode: screen;
   opacity: 0.6;
-}
-
-img::before {
-  position: absolute;
-  content: '';
-  background-color: #64039e;
-  /* opacity: 0.6; */
-  /* background-blend-mode: screen; */
 }
 
 .stats__container {
@@ -98,6 +95,9 @@ img::before {
     text-align: left;
     padding-left: 4.5em;
     padding-right: 7em;
+  }
+  .card__image {
+    border-radius: 0 10px 10px 0;
   }
   img {
     border-radius: 0 10px 10px 0;
